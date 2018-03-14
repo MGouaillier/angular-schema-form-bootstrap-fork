@@ -130,7 +130,7 @@ module.exports = path;
 /***/ function(module, exports) {
 
 var path = '/bootstrap/fieldset.html';
-var html = "<fieldset ng-disabled=\"form.readonly\" class=\"schema-form-fieldset {{::form.htmlClass + ' ' + idClass}}\">\r\n  <div class=\"label-container\"><legend ng-class=\"{'sr-only': !showTitle() }\">{{ form.title }}</legend><vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\" vprops-info-format=\"'markdown'\"/></div>\r\n  <div class=\"help-block\" ng-show=\"form.description\" ng-bind-html=\"form.description\"></div>\r\n</fieldset>\r\n";
+var html = "<fieldset ng-disabled=\"form.readonly\" class=\"schema-form-fieldset {{::form.htmlClass + ' ' + idClass}}\">\r\n  <div class=\"legend-container\"><legend ng-class=\"{'sr-only': !showTitle() }\">{{ form.title }}</legend><vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\" vprops-info-format=\"'markdown'\"/></div>\r\n  <div class=\"help-block\" ng-show=\"form.description\" ng-bind-html=\"form.description\"></div>\r\n</fieldset>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
