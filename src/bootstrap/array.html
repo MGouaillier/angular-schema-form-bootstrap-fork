@@ -1,7 +1,13 @@
 <div  class="schema-form-array {{::form.htmlClass + ' ' + idClass}}"
       sf-field-model="sf-new-array"
       sf-new-array>
-  <label class="control-label" ng-show="showTitle()">{{ form.title }}</label>
+  <div class="label-container">
+    <label class="control-label" ng-show="showTitle()">{{ form.title }}</label>
+    <div class="schema-form-tooltip">
+        <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+    </div>
+  </div>
+  
   <ol class="list-group" sf-field-model ui-sortable="form.sortOptions">
     <li class="list-group-item {{::form.fieldHtmlClass}}"
         sf-field-model="ng-repeat"

@@ -4,9 +4,15 @@
        'has-success': form.disableSuccessState !== true && hasSuccess(),
        'required': form.required === true
      }">
-  <label class="control-label {{::form.labelHtmlClass}}"
-        ng-show="showTitle()" sf-field-model
-        schema-validate="form" >{{form.title}}</label>
+  <div class="label-container">
+    <label class="control-label {{::form.labelHtmlClass}}"
+    ng-show="showTitle()" sf-field-model
+    schema-validate="form" >{{form.title}}</label>
+    <div class="schema-form-tooltip">
+        <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+    </div>
+  </div>
+  
   <div>
       <label class="radio-inline" ng-repeat="tm in form.titleMap" >
       <input type="radio"

@@ -5,8 +5,12 @@
        'has-feedback': form.feedback !== false,
        'required': form.required === true
      }">
-  <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">{{form.title}}</label>
-
+     <div class="label-container">
+       <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">{{form.title}}</label>
+       <div class="schema-form-tooltip">
+         <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+       </div>
+     </div>
   <input ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
          ng-show="::form.key"
          type="{{::form.type}}"

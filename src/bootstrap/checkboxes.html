@@ -6,11 +6,16 @@
        'has-success': form.disableSuccessState !== true &&  hasSuccess(),
        'required': form.required === true
      }">
-  <label class="control-label {{::form.labelHtmlClass}}"
-         sf-field-model
-         schema-validate="form"
-         ng-show="showTitle()">{{form.title}}</label>
-
+  <div class="label-container">
+    <label class="control-label {{::form.labelHtmlClass}}"
+    sf-field-model
+    schema-validate="form"
+    ng-show="showTitle()">{{form.title}}</label>
+    <div class="schema-form-tooltip">
+      <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+    </div>
+  </div>
+  
   <div class="checkbox" ng-repeat="val in titleMapValues track by $index" >
     <label>
       <input type="checkbox"

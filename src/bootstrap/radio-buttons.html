@@ -4,8 +4,11 @@
        'has-success': form.disableSuccessState !== true &&  hasSuccess(),
        'required': form.required === true
      }">
-  <div>
+  <div class="label-container">
     <label class="control-label {{::form.labelHtmlClass}}" ng-show="showTitle()">{{form.title}}</label>
+    <div class="schema-form-tooltip">
+        <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+    </div>
   </div>
   <div class="btn-group">
     <label sf-field-model="replaceAll" class="btn {{ (tm.value === $$value$$) ? form.style.selected || 'btn-default' : form.style.unselected || 'btn-default'; }}"
