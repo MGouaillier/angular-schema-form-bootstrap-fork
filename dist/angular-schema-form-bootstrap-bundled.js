@@ -1,7 +1,7 @@
 /*!
  * angular-schema-form-bootstrap
  * @version 1.0.0-alpha.5
- * @date Wed, 18 Apr 2018 14:33:40 GMT
+ * @date Wed, 18 Apr 2018 14:48:24 GMT
  * @link https://github.com/json-schema-form/angular-schema-form-bootstrap
  * @license MIT
  * Copyright (c) 2014-2018 JSON Schema Form
@@ -104,7 +104,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/bootstrap/checkbox.html';
-var html = "<div class=\"checkbox schema-form-checkbox {{::form.htmlClass + ' ' + idClass}}\"\r\n     ng-class=\"{\r\n       'has-error': form.disableErrorState !== true && hasError(),\r\n       'has-success': form.disableSuccessState !== true && hasSuccess(),\r\n       'has-feedback': form.feedback !== false,\r\n       'required': form.required === true\r\n     }\">\r\n  <label class=\"{{::form.labelHtmlClass}}\">\r\n    <input type=\"checkbox\"\r\n           sf-changed=\"form\"\r\n           ng-disabled=\"form.readonly\"\r\n           sf-field-model\r\n           schema-validate=\"form\"\r\n           class=\"{{::form.fieldHtmlClass}}\"\r\n           name=\"{{::fieldId(true, false)}}\">\r\n    <span ng-bind-html=\"form.title\"></span>\r\n    <div class=\"schema-form-tooltip\">\r\n        <vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\"/>\r\n    </div>\r\n  </label>\r\n  <div class=\"help-block\" sf-message=\"form.description\"></div>\r\n</div>\r\n";
+var html = "<div class=\"checkbox schema-form-checkbox {{::form.htmlClass + ' ' + idClass}}\"\r\n     ng-class=\"{\r\n       'has-error': form.disableErrorState !== true && hasError(),\r\n       'has-success': form.disableSuccessState !== true && hasSuccess(),\r\n       'has-feedback': form.feedback !== false,\r\n       'required': form.required === true\r\n     }\">\r\n  <div class=\"label-container\">\r\n    <label class=\"{{::form.labelHtmlClass}}\">\r\n        <input type=\"checkbox\"\r\n            sf-changed=\"form\"\r\n            ng-disabled=\"form.readonly\"\r\n            sf-field-model\r\n            schema-validate=\"form\"\r\n            class=\"{{::form.fieldHtmlClass}}\"\r\n            name=\"{{::fieldId(true, false)}}\">\r\n        <span ng-bind-html=\"form.title\"></span>\r\n    </label>\r\n    <div class=\"schema-form-tooltip\">\r\n      <vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\"/>\r\n    </div>\r\n  </div>\r\n  <div class=\"help-block\" sf-message=\"form.description\"></div>\r\n</div>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 

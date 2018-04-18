@@ -5,18 +5,20 @@
        'has-feedback': form.feedback !== false,
        'required': form.required === true
      }">
-  <label class="{{::form.labelHtmlClass}}">
-    <input type="checkbox"
-           sf-changed="form"
-           ng-disabled="form.readonly"
-           sf-field-model
-           schema-validate="form"
-           class="{{::form.fieldHtmlClass}}"
-           name="{{::fieldId(true, false)}}">
-    <span ng-bind-html="form.title"></span>
+  <div class="label-container">
+    <label class="{{::form.labelHtmlClass}}">
+        <input type="checkbox"
+            sf-changed="form"
+            ng-disabled="form.readonly"
+            sf-field-model
+            schema-validate="form"
+            class="{{::form.fieldHtmlClass}}"
+            name="{{::fieldId(true, false)}}">
+        <span ng-bind-html="form.title"></span>
+    </label>
     <div class="schema-form-tooltip">
-        <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+      <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
     </div>
-  </label>
+  </div>
   <div class="help-block" sf-message="form.description"></div>
 </div>
