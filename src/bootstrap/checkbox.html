@@ -13,14 +13,10 @@
            schema-validate="form"
            class="{{::form.fieldHtmlClass}}"
            name="{{::fieldId(true, false)}}">
-        <div class="label-container">
-            <label class="control-label">
-                {{form.title}}
-            </label>
-            <div class="schema-form-tooltip">
-                <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
-            </div>
-        </div>
+    <span ng-bind-html="form.title"></span>
+    <div class="schema-form-tooltip">
+        <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
+    </div>
   </label>
   <div class="help-block" sf-message="form.description"></div>
 </div>
