@@ -1,6 +1,6 @@
 <fieldset ng-disabled="form.readonly" class="schema-form-fieldset {{::form.htmlClass + ' ' + idClass}}">
   <div class="label-container">
-    <legend ng-class="{'sr-only': !showTitle() }">{{ form.title }}</legend>
+    <label ng-class="{'sr-only': !showTitle() }">{{ form.title }}</label>
     <div class="schema-form-tooltip">
       <vue-component ng-if="form.tooltip" name="FcInfoIcon" vprops-info="form.tooltip"/>
     </div>

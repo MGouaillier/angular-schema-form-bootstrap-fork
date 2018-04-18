@@ -1,7 +1,7 @@
 /*!
  * angular-schema-form-bootstrap
  * @version 1.0.0-alpha.5
- * @date Wed, 18 Apr 2018 14:29:39 GMT
+ * @date Wed, 18 Apr 2018 14:33:40 GMT
  * @link https://github.com/json-schema-form/angular-schema-form-bootstrap
  * @license MIT
  * Copyright (c) 2014-2018 JSON Schema Form
@@ -131,7 +131,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/bootstrap/fieldset.html';
-var html = "<fieldset ng-disabled=\"form.readonly\" class=\"schema-form-fieldset {{::form.htmlClass + ' ' + idClass}}\">\r\n  <div class=\"label-container\">\r\n    <legend ng-class=\"{'sr-only': !showTitle() }\">{{ form.title }}</legend>\r\n    <div class=\"schema-form-tooltip\">\r\n      <vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\"/>\r\n    </div>\r\n  </div>\r\n  <div class=\"help-block\" ng-show=\"form.description\" ng-bind-html=\"form.description\"></div>\r\n</fieldset>\r\n";
+var html = "<fieldset ng-disabled=\"form.readonly\" class=\"schema-form-fieldset {{::form.htmlClass + ' ' + idClass}}\">\r\n  <div class=\"label-container\">\r\n    <label ng-class=\"{'sr-only': !showTitle() }\">{{ form.title }}</label>\r\n    <div class=\"schema-form-tooltip\">\r\n      <vue-component ng-if=\"form.tooltip\" name=\"FcInfoIcon\" vprops-info=\"form.tooltip\"/>\r\n    </div>\r\n  </div>\r\n  <div class=\"help-block\" ng-show=\"form.description\" ng-bind-html=\"form.description\"></div>\r\n</fieldset>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
